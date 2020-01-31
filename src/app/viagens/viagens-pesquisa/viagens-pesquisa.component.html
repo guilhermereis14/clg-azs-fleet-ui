@@ -1,0 +1,39 @@
+<div class="container">  
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <h1>Viagem</h1>
+    </div>
+
+    <div class="ui-g-10 ui-fluid">
+      <label>Motorista</label>
+      <p-dropdown name="motorista" ngModel #motorista="ngModel" [options]="motorista" 
+                    placeholder="Selecione"></p-dropdown>
+    </div>
+
+    <div class="ui-g-10 ui-fluid">
+      <label>Veículo</label>
+      <p-dropdown name="veiculo" ngModel #veiculo="ngModel" [options]="veiculo" 
+                    placeholder="Selecione"></p-dropdown>
+    </div>
+
+    <div class="ui-g-12">
+      <label>Data de Início</label>
+      <p-inputMask name="datapartida" ngModel #datapartida="ngModel" 
+                     mask="99/99/9999" placeholder="dd/mm/aaaa"></p-inputMask>
+    </div>
+
+    <div class="ui-g-12">
+      <button pButton type="submit" label="Pesquisar"></button>
+    </div>
+
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-12">        
+      <app-viagens-grid [viagens]="viagens"></app-viagens-grid>
+    </div>
+    <div class="ui-g-12">
+      <button pButton label="Novo cadastro"></button>
+    </div>
+  </div>   
+</div>

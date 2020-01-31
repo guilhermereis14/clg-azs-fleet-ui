@@ -1,0 +1,13 @@
+label {
+  font-weight: bold;
+  padding-bottom: 5px;
+  display: flex;
+
+}
+.acoes a{
+  margin-right: 3px;
+}
+.acoes{
+  display: flex;
+  justify-content: center;
+}

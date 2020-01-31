@@ -1,0 +1,54 @@
+<div class="container">
+  <form action="" autocomplete="off">
+    
+    <div class="ui-g">
+      
+      <div class="ui-g-12">
+        <h1>Nova Viagem</h1>
+      </div>
+
+      <div class="ui-g-6 ui-md-3 ui-sm-6 ui-fluid">
+        <label>Data de Partida</label>
+        <p-inputMask name="datapartida" ngModel #datapartida="ngModel" 
+                     mask="99/99/9999" placeholder="dd/mm/aaaa" required></p-inputMask>
+      </div>
+
+      <div class="ui-g-6 ui-md-3 ui-sm-6 ui-fluid">
+        <label>Data de Chegada</label>
+        <p-inputMask name="datachegada" ngModel #datachegada="ngModel" 
+                     mask="99/99/9999" placeholder="dd/mm/aaaa"></p-inputMask>
+      </div>
+      
+      <div class="ui-g-12 ui-md-8 ui-sm-12 ui-fluid">
+        <label>Produto/Carga</label>
+        <input name="carga" ngModel #carga="ngModel" pInputText type="text">
+      </div>
+
+      <div class="ui-g-12 ui-md-4 ui-sm-4 ui-fluid">
+        <label>Valor do Frete</label>
+        <input name="valorfrete" ngModel #valorfrete="ngModel" pInputText type="text" placeholder="0,00" 
+        currencyMask
+        [options]="{prefix: '', thousands: '.', decimal: ',', allowNegative: false} ">
+      </div>
+  
+      <div class="ui-g-12 ui-md-6 ui-sm-12 ui-fluid">
+        <label>Veículo</label>
+        <p-dropdown name="veiculo" ngModel #veiculo="ngModel" [options]="veiculo" 
+                    placeholder="Selecione" requirid ></p-dropdown>
+      </div>
+
+      <div class="ui-g-12 ui-md-6 ui-sm-12 ui-fluid">
+        <label>Motorista</label>
+        <p-dropdown name="motorista" ngModel #motorista="ngModel" [options]="motorista" 
+                    placeholder="Selecione" requirid></p-dropdown>
+      </div>
+                 
+      <div class="ui-g espaco-botao">
+        <div class="ui-g-3"><button pButton label="Cadastrar"></button></div>
+        <div class="ui-g-3"><button pButton label="Cancelar" class="ui-button-danger"></button></div>
+        <div class="ui-g-6"><a href="javascript:;">Voltar para a pesquisa</a></div>
+      </div>
+    </div>
+  </form>
+  
+</div>

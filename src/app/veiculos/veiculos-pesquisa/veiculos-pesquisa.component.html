@@ -1,0 +1,27 @@
+<div class="container">  
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <h1>Veículos</h1>
+    </div>
+
+    <div class="ui-g-12">
+      <label>Placa</label>
+      <p-inputMask name="placa" ngModel #placa="ngModel" mask="aaa-9999" 
+                     placeholder="aaa-9999" required></p-inputMask>
+    </div>
+
+    <div class="ui-g-12">
+      <button pButton type="submit" label="Pesquisar"></button>
+    </div>
+
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-12">        
+      <app-veiculos-grid [veiculos]="veiculos"></app-veiculos-grid>
+    </div>
+    <div class="ui-g-12">
+      <button pButton label="Novo cadastro"></button>
+    </div>
+  </div>   
+</div>

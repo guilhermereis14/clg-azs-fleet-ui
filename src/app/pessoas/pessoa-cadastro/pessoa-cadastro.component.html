@@ -1,0 +1,69 @@
+<div class="container  ">
+  <form autocomplete="off">
+    
+    <div class="ui-g ">
+      
+      <div class="ui-g-12">
+        <h1>Nova Pessoa</h1>
+      </div>
+
+      <div class="ui-g-12 ui-fluid">
+        <label>Nome</label>
+        <input name="nome" ngModel #nome="ngModel" pInputText type="text">
+      </div>
+
+      <div class="ui-g-12 ui-md-4 ui-sm-5 ui-fluid">
+        <label>CPF</label>
+        <p-inputMask name="cpf" ngModel #cpf="ngModel" mask="999.999.999-99" 
+                     placeholder="000.000.000-00"></p-inputMask>
+      </div>
+      
+      <div class="ui-g-12 ui-md-4 ui-sm-7 ui-fluid">
+        <label>Data de Nascimento</label>
+        <p-inputMask name="datanascimento" ngModel #datanascimento="ngModel" mask="99/99/9999" 
+                     placeholder="dd/mm/aaaa"></p-inputMask>
+      </div>
+
+     <div class="ui-g-12 ui-md-5 ui-sm-12 ui-fluid">
+        <label>Sexo</label>
+        <p-dropdown name="sexo" ngModel #sexo="ngModel" [options]="sexoPessoa" placeholder="Selecione"></p-dropdown>  
+      </div>
+  
+      <div class="ui-g-12 ui-md-5 ui-sm-12 ui-fluid">
+        <label>Cargo</label>
+        <input name="cargo" ngModel #cargo="ngModel" pInputText type="text">
+      </div>
+
+      <div class="ui-g-12 ui-md-3 ui-sm-6 ui-fluid">
+        <label>Número CNH</label>
+        <p-inputMask name="cnhnumber" ngModel #cnhnumber="ngModel" mask="999999999999" 
+                     placeholder="999999999999"></p-inputMask>
+      </div>
+
+      <div class="ui-g-12 ui-md-3 ui-sm-6 ui-fluid">
+        <label>Categoria</label>
+        <p-dropdown name="categoriacnh" ngModel #categoriacnh="ngModel" [options]="categoriaCnh" 
+                    placeholder="Selecione"></p-dropdown> 
+      </div>
+
+      <div class="ui-g-12 ui-md-3 ui-sm-6 ui-fluid">
+        <label>Expedição</label>
+        <p-inputMask name="dtexpedicao" ngModel #dtexpedicao="ngModel" mask="99/99/9999" 
+                     placeholder="dd/mm/aaaa"></p-inputMask>
+      </div>
+
+      <div class="ui-g-12 ui-md-3 ui-sm-6 ui-fluid">
+        <label>Validade</label>
+        <p-inputMask name="dtvalidade" ngModel #dtvalidade="ngModel" mask="99/99/9999"
+                     placeholder="dd/mm/aaaa"></p-inputMask>
+      </div>
+        
+        <div class="ui-g espaco-botao">
+          <div class="ui-g-3"><button type="submit" pButton label="Cadastrar"></button></div>
+          <div class="ui-g-3"><button pButton type="reset" label="Cancelar" class="ui-button-danger"></button></div>
+          <div class="ui-g-6"><a href="javascript:;">Voltar para a pesquisa</a></div>
+        </div>
+
+    </div>
+  </form>  
+</div>

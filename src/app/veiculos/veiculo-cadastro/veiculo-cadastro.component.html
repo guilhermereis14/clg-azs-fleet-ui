@@ -1,0 +1,61 @@
+<div class="container">
+  <form #veiculoForm="ngForm" (ngSubmit)="salvar(veiculoForm)" autocomplete="off">
+    
+    <div class="ui-g ">
+      <div class="ui-g-12">
+        <h1>Novo Veículo</h1>
+      </div>
+
+      <div class="ui-g-12 ui-md-6 ui-fluid">
+        <label>Modelo</label>
+        <input name="modelo" ngModel #modelo="ngModel" pInputText type="text">
+      </div>
+
+      <div class="ui-g-12 ui-md-6 ui-sm-12 ui-fluid">
+        <label>Fabricante</label>
+        <input name="fabricante" ngModel #fabricante="ngModel" pInputText type="text">
+      </div>
+      
+      <div class="ui-g-12 ui-md-4 ui-sm-4 ui-fluid">
+        <label>Placa</label>
+        <p-inputMask name="placa" ngModel #placa="ngModel" mask="aaa-9999" 
+                     placeholder="aaa-9999" required></p-inputMask>
+      </div>
+
+      <div class="ui-g-12 ui-md-4 ui-sm-4 ui-fluid">
+        <label>Cidade</label>
+        <input name="cidade" ngModel #cidade="ngModel" pInputText type="text" required>
+      </div>
+  
+      <div class="ui-g-12 ui-md-4 ui-sm-4 ui-fluid">
+        <label>Estado</label>
+        <input name="estado" ngModel #estado="ngModel" pInputText type="text" required>
+      </div>
+
+      <div class="ui-g-12 ui-md-3 ui-sm-4 ui-fluid">
+        <label>Ano de Fabricação</label>
+        <p-inputMask name="anofab" ngModel #anofab="ngModel"  mask="99/99/9999" placeholder="dd/mm/aaaa"></p-inputMask>
+      </div>
+      <div class="ui-g-12 ui-md-3 ui-sm-4 ui-fluid">
+        <label>Renavam</label>
+        <p-inputMask name="renavam" ngModel #renavam="ngModel" mask="99999999999" placeholder="99999999999"></p-inputMask>
+      </div>
+      <div class="ui-g-12 ui-md-3 ui-sm-4 ui-fluid">
+        <label>Chassi</label>
+        <input name="chassi" ngModel #chassi="ngModel" pInputText type="text">
+      </div>
+      <div class="ui-g-12 ui-md-3 ui-sm-12 ui-fluid">
+        <label>Categoria do Veículo</label>
+        <p-dropdown name="categoria" ngModel #categoria="ngModel" [options]="categoriaVeiculo" placeholder="Selecione"></p-dropdown>
+      </div>
+        
+      
+      <div class="ui-g espaco-botao">
+        <div class="ui-g-3"><button type="submit" pButton label="Cadastrar"></button></div>
+        <div class="ui-g-3"><button pButton type="reset" label="Cancelar" class="ui-button-danger"></button></div>
+        <div class="ui-g-6"><a href="javascript:;">Voltar para a pesquisa</a></div>
+      </div>
+    </div>
+  </form>
+  
+</div>

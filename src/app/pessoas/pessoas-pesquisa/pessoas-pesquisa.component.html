@@ -1,0 +1,33 @@
+<div class="container">  
+  <div class="ui-g">
+    <form autocomplete="off" (ngSubmit)="pesquisar()">
+      <div class="ui-g-12">
+        <h1>Pessoa</h1>
+      </div>
+
+      <div class="ui-g-12 ui-fluid">
+        <label>Nome</label>
+        <input pInputText type="text" name="nome" [(ngModel)]="nome">
+      </div>
+
+      <div class="ui-g-12">
+        <label>CPF</label>
+        <p-inputMask name="cpf" ngModel #cpf="ngModel" mask="999.999.999-99" 
+                      placeholder="000.000.000-00"></p-inputMask>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Pesquisar"></button>
+      </div>
+    </form>  
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-12">        
+      <app-pessoas-grid [pessoas]="pessoas"></app-pessoas-grid> <!-- Table pessoas-->
+    </div>
+    <div class="ui-g-12">
+      <button pButton label="Novo cadastro"></button>
+    </div>
+  </div>   
+</div>
